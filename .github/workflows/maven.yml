@@ -27,6 +27,6 @@ jobs:
 
     - uses: ./.github/actions/docker_build
       with:
-        path_dockerfile: src/main/docker/Dockerfile.jvm
+        path_dockerfile: ./src/main/docker/Dockerfile.jvm
         image_name: rodrigobugalhao464/academy
         tag_name: v1
