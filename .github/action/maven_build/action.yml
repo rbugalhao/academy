@@ -1,0 +1,7 @@
+name: Action ex1
+description: Replace-With-Your-Action-Description
+runs:
+  using: composite
+  steps:
+    - uses: ./.github/actions/maven_build
+      shell: bash
