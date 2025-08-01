@@ -23,12 +23,10 @@ jobs:
     
     - uses: actions/checkout@v4
     
-    - name: Build with Maven
-      uses: ./.github/actions/maven_build
+    - uses: ./.github/actions/maven_build
 
-    - name: Create Docker image
-      uses: ./.github/actions/docker_build
+    - uses: ./.github/actions/docker_build
       with:
-        path_dockerfile: ./src/main/docker/Dockerfile.jvm
+        path_dockerfile: src/main/docker/Dockerfile.jvm
         image_name: academy
-        tag_name: $(date +%s)
+        tag_name: v1
