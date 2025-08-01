@@ -17,23 +17,13 @@ on:
 jobs:
   build:
 
+    env:
+      QUARKUS_DATABASE_JDBC_URL: 
+      QUARKUS_DATABASE_USERNAME: postgres
+      QUARKUS_DATABASE_PASSWORD: postgres
+
     runs-on: ubuntu-latest
     
-    #services:
-    #  postgres:
-    #    image: postgres:16
-    #    ports:
-    #      - 5432:5432
-    #    env:
-    #      POSTGRES_USER: postgres
-    #     POSTGRES_PASSWORD: postgres
-    #      POSTGRES_DB: quarkus-db
-    #    options: >-
-    #      --health-cmd pg_isready
-    #      --health-interval 10s
-    #      --health-timeout 5s
-    #      --health-retries 5
-      
     steps:
     
     - uses: actions/checkout@v4
@@ -43,3 +33,7 @@ jobs:
 
     - name: Create Docker image
       uses: ./.github/actions/docker_build
+      with:
+        path_dockerfile: 
+        image_name:
+        tag_name:
