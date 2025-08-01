@@ -9,6 +9,5 @@ inputs:
 runs:
   using: composite
   steps:
-    - run: |
-        echo "Update me with the necessary commands"
+    - run: docker build . --file ./src/main/docker/Dockerfile.jvm --tag academy:$(date +%s)
       shell: bash
