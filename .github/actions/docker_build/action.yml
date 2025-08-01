@@ -5,13 +5,10 @@ inputs:
   path_dockerfile: ./src/main/docker/Dockerfile.jvm
   image_name: academy
   tag_name: $(date +%s)
-  replace_with_your_input_name:
-    description: "Replace-With-Your-Input-Description"
-    required: false
-    default: "Replace-With-Your-Input-Default-Value"
+  
 runs:
   using: composite
   steps:
     #- run: docker build . --file ./src/main/docker/Dockerfile.jvm --tag academy:$(date +%s)
-    -run: docker build . --file ${{ path_dockerfile }} --tag ${{image_name}}:${{tag_name}}
+    -run: docker build . --file ${{ inputs.path_dockerfile }} --tag ${{ inputs.image_name }}:${{ inputs.tag_name }}
       shell: bash
