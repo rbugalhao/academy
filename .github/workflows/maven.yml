@@ -34,4 +34,4 @@ jobs:
     - uses: ./.github/actions/push_build
       with:
         DOCKERHUB_USERNAME: ${{vars.DOCKERHUB_USERNAME}}
-        DOCKERHUB_TOKEN: ${{services.DOCKERHUB_TOKEN}}
+        DOCKERHUB_TOKEN: ${{secrets.DOCKERHUB_TOKEN}}
