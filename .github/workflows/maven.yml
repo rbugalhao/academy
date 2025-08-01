@@ -28,7 +28,7 @@ jobs:
     - uses: ./.github/actions/docker_build
       with:
         path_dockerfile: ./src/main/docker/Dockerfile.jvm
-        image_name: rodrigobugalhao464/academy
+        image_name: ${{vars.DOCKERHUB_USERNAME}}/academy
         tag_name: v1
 
     - uses: ./.github/actions/push_build
