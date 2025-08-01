@@ -17,11 +17,6 @@ on:
 jobs:
   build:
 
-    env:
-      QUARKUS_DATABASE_JDBC_URL: 
-      QUARKUS_DATABASE_USERNAME: postgres
-      QUARKUS_DATABASE_PASSWORD: postgres
-
     runs-on: ubuntu-latest
     
     steps:
@@ -36,4 +31,4 @@ jobs:
       with:
         path_dockerfile: ./src/main/docker/Dockerfile.jvm
         image_name: academy
-        tag_name:
+        tag_name: $(date +%s)
