@@ -4,4 +4,4 @@ runs:
   using: composite
   steps:
     - uses: ./.github/action/maven_build
-      #shell: bash
+      shell: bash
