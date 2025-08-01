@@ -18,5 +18,5 @@ runs:
   using: composite
   steps:
     #- run: docker build . --file ./src/main/docker/Dockerfile.jvm --tag academy:$(date +%s)
-    -run: docker build . --file ${{ inputs.path_dockerfile }} --tag ${{ inputs.image_name }}:${{ inputs.tag_name }}
+    - run: docker build . --file ${{ inputs.path_dockerfile }} --tag ${{ inputs.image_name }}:${{ inputs.tag_name }}
       shell: bash
