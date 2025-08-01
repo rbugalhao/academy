@@ -28,7 +28,8 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven
-      run: mvn -B package --file pom.xml
+      #run: mvn -B package --file pom.xml
+      uses: ./.github/action/maven_build
 
     - name: Create Docker image
       run: docker build . --file ./src/main/docker/Dockerfile.jvm --tag academy:$(date +%s)
