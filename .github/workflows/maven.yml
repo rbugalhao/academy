@@ -24,7 +24,7 @@ jobs:
     - uses: actions/checkout@v4
     
     - name: Build with Maven
-      uses: ./.github/actions/maven_build/action.yml
+      uses: rbugalhao/academy/.github/actions/maven_build/action.yml
 
     - name: Create Docker image
       run: docker build . --file ./src/main/docker/Dockerfile.jvm --tag academy:$(date +%s)
