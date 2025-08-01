@@ -29,7 +29,7 @@ jobs:
       with:
         path_dockerfile: ./src/main/docker/Dockerfile.jvm
         image_name: ${{vars.DOCKERHUB_USERNAME}}/academy
-        tag_name: $(date +%s)
+        tag_name: v1
 
     - uses: ./.github/actions/push_build
       with:
