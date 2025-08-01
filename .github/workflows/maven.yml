@@ -42,4 +42,4 @@ jobs:
       uses: ./.github/actions/maven_build
 
     - name: Create Docker image
-      run: ./.github/actions/docker_build
+      uses: ./.github/actions/docker_build
