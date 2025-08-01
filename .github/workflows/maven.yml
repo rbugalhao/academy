@@ -26,7 +26,12 @@ jobs:
     - uses: ./.github/actions/maven_build
 
     - uses: ./.github/actions/docker_build
-    #  with:
-    #    path_dockerfile: ./src/main/docker/Dockerfile.jvm
-    #    image_name: rodrigobugalhao464/academy
-    #    tag_name: v1
+      with:
+        path_dockerfile: ./src/main/docker/Dockerfile.jvm
+        image_name: rodrigobugalhao464/academy
+        tag_name: v1
+
+    - uses: ./.github/actions/push_build
+      with:
+        DOCKERHUB_USERNAME: ${{vars.DOCKERHUB_USERNAME}}
+        DOCKERHUB_TOKEN: ${{services.DOCKERHUB_TOKEN}}
