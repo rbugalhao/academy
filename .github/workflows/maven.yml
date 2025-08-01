@@ -34,6 +34,6 @@ jobs:
     - name: Create Docker image
       uses: ./.github/actions/docker_build
       with:
-        path_dockerfile: 
-        image_name:
+        path_dockerfile: ./src/main/docker/Dockerfile.jvm
+        image_name: academy
         tag_name:
